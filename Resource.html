@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Careers Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Add custom interactivity (if needed)
+// Example: Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+    <!-- Custom CSS -->
+     <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/237/191/large_2x/colorful-pencils-on-one-side-of-dark-background-free-photo.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #222;
+}
+<!--All Card-->
+
+.info-cards {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.card h3 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6600;
+  text-decoration: none;
+}
+.read-more-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+<!--footer-->
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* body {
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+} */
+
+.footer {
+	background-color: #151515;
+	padding: 80px 0;
+}
+
+#contain {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: #FFF;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #E91E63;
+	width: 50px;
+	height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	color: #DDD;
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #FFF;
+	padding-left: 7px;
+}
+
+.footer-col .social-links a {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+	color: #151515;
+	background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+}
+
+  
+
+     </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Student Careers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Resource.html">Resources</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#contact">Conta</a>
+                </li> -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Explore More
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="class10th.html">10th</a></li>
+                        <li><a class="dropdown-item" href="class12th.html">12th/ Diploma</a></li>
+                        <li><a class="dropdown-item" href="UgProgram.html">UG</a></li>
+                        <li><a class="dropdown-item" href="PgProgram.html">PG</a></li>                        </ul>
+                  </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Resources</h1>
+            <p class="lead">Your guide to a brighter future with personalized career advice and resources.</p>
+            <button class="btn btn-light btn-lg mt-3">Start your journey with us today!</button>
+        </div>
+    </header>
+
+          <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <!-- YOUR CODE -->
+                     <br><br>
+                    <section class="info-cards">
+                        <div class="container cards">
+                          <div class="card">
+                            <h3>Post Graduation</h3>
+                            <p>"The pursuit of knowledge is endless; every achievement is but a stepping stone to greater understanding."</p>
+                            <a href="https://www.mastersportal.com/"  target="_blank"class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <div class="card">
+                            <h3>Under Graduation</h3>
+                            <p>"Your time as an undergraduate is the foundation for the future—embrace challenges, seek knowledge, and dare to dream beyond limits."</p>
+                            <a href="https://www.topuniversities.com/blog/33-useful-websites-students" target="_blank" class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <div class="card">
+                            <h3>12th</h3>
+                            <p>"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do."</p>
+                            <a href="https://acadlog.com/updates/blog/best-career-options-after-12th" target="_blank" class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                        </div>
+                      </section>
+                      <br><br>
+                      <section class="info-cards">
+                        <div class="container cards">
+                          <div class="card">
+                            <h3>10th</h3>
+                            <p>"Education is the most powerful weapon which you can use to change the world."</p>
+                            <a href="https://www.toprankers.com/career-options-after-10-for-weak-students" target="_blank" class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <div class="card">
+                            <h3>After PG </h3>
+                            <p>"Don't watch the clock; do what it does. Keep going."
+                            </p>
+                            <a href="https://www.careers360.com/courses-certifications/articles/high-paid-jobs-after-post-graduation" target="_blank" class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <div class="card">
+                            <h3>After UG</h3>
+                            <p>"The future belongs to those who believe in the beauty of their dreams."</p>
+                            <a href="https://in.indeed.com/career-advice/finding-a-job/how-to-find-job-after-graduation" target="_blank" class="read-more"><button class="read-more-btn" >Explore</button></a>
+                          </div>
+                        </div>
+                      </section>
+                      <br><br>
+                      <center>
+                      <section class="info-cards">
+                        <div class="container cards">
+                          <div class="card">
+                            <h3>After 12th</h3>
+                            <p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today."</p>
+                            <a href="https://leverageedu.com/blog/list-of-jobs-after-12th-pass/" target="_blank"  class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <div class="card">
+                            <h3>After 10th</h3>
+                            <p>"Go confidently in the direction of your dreams. Live the life you have imagined." </p>
+                            <a href="https://www.careers360.com/careers/articles/career-option-after-10th-counar" target="_blank"  class="read-more"><button class="read-more-btn" >Explore</button> </a>
+                          </div>
+                          <!-- <div class="card">
+                            <h3>Jobs at Ignite</h3>
+                            <p>Explore our opportunities where innovation meets execution.</p>
+                            <a href="#jobs" class="read-more"><button class="read-more-btn" >Read more</button></a>
+                          </div> -->
+                        </div>
+                      </section>
+                    </center>
+                      <br><br> 
+
+                      !-- Footer -->
+                      <div class="container">
+                        <div class="row">
+                        <!-- <div class=" col-sm-6 width:100%;"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium.</p></div> -->
+                        <div class="col-sm-1"></div>
+                        <!-- <div class=" col-sm-5 width: 100%"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. .</p></div> -->
+                      </div>
+                      </div>
+                      <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+                  
+                  <footer class="footer">
+                    <div class="container row">
+                      <div class="footer-col">
+                        <h4>Student Career</h4>
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="About.html">AboutUs</a></li>
+                          <li><a href="Resources.html">Resources</a></li>
+                          <li><a href="guide persnal.html">Personalized Career Guidance</a></li>	
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Path</h4>
+                        <ul>
+                          <li><a href="class10th.html">After 10th</a></li>
+                          <li><a href="class12th.html">After 12th</a></li>
+                          <li><a href="UgProgram.html">After Undergraduate</a></li>
+                          <li><a href="PgProgram.html">After Postgraduate</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Features </h4>
+                        <ul>
+                          <li><a href="quiz1.html">Quiz</a></li>
+                                    <li><a href="guide persnal.html">Guide</a></li>
+                                    <li><a href="Interactive.html">Interactive Tools</a></li>
+                                    <li><a href="Features.html">Explore Features</a></li>
+                        </ul>
+                      </div>
+                      <!-- <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                      </div> -->
+                    </div>
+                        </footer>
+                    
+                  </body>
+                  </html>
