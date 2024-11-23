@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Careers Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/001/237/191/large_2x/colorful-pencils-on-one-side-of-dark-background-free-photo.JPG');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border-radius: 10px;
+            
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            border: 5px groove teal;
+        }
+
+        .govCard {
+            background: #ffffff;
+            border: 5px inset teal;
+            border-radius: 10px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .govCard h3 {
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+
+        .govCard p {
+            font-size: 18px;
+            color: blue;
+            margin-bottom: 15px;
+        }
+
+        .govCard a {
+            text-decoration: none;
+            color: #ffffff;
+            background: orangered;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .govCard a:hover {
+            background: teal;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        /* footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        } */
+
+        /* Career Path Quiz */
+        #quizSection {
+            background-color: #f1f1f1;
+            padding: 30px 0;
+        }
+
+        .quizCard {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .quizCard button {
+            background: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .quizCard button:hover {
+            background: orangered;
+        }
+
+        .testimonialCard {
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .testimonialCard p {
+            font-style: italic;
+        }
+
+        <!--footer-->
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+	background-color: #151515;
+	padding: 80px 0;
+}
+
+#contain {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: #FFF;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	background-color: #E91E63;
+	width: 100px;
+	height: 5px;
+    margin-left:35ppx;
+    /* text-align: center; */
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	color: #DDD;
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #FFF;
+	padding-left: 7px;
+}
+
+.footer-col .social-links a {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+	color: #151515;
+	background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+}
+h5 ,h3{
+    color: rgb(201, 14, 54);
+    font-size: 27px;
+}
+#stu{
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"">Student Careers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Resource.html">Resources</a></li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Explore More
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="class10th.html">10th</a></li>
+                          <li><a class="dropdown-item" href="class12th.html">12th/ Diploma</a></li>
+                          <li><a class="dropdown-item" href="UgProgram.html">UG</a></li>
+                          <li><a class="dropdown-item" href="PgProgram.html">PG</a></li>
+                        </ul>
+                      </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Student Careers Portal</h1>
+            <p class="lead" style="font-size: 25px;">Your guide to a brighter future with personalized career advice and resources.</p>
+            <a href="Features.html" class="btn btn-light btn-lg mt-3">EXPLORE DIFFERENT FUTURE OPTIONS</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="guide persnal.html" style=" text-decoration: none;">
+                    <div class="card p-3">
+                        <h5>Personalized Guidance</h5>
+                        <p>Get tailored career recommendations based on your interests and goals.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5>Educational Resources</h5>
+                        <p>Access a library of resources to help you prepare for your career.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5>Interactive Tools</h5>
+                        <p>Use interactive tools to explore your career options and pathways.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- IMAGE & through -->
+   <div class="container2">
+    <div class="row">
+    <div class=" col-sm-6 width: 100%">
+    <img   src="https://c1.wallpaperflare.com/preview/928/174/528/school-learning-graphic-design.jpg" style="height: 450px;"></div>
+    <div class="col-sm-1"></div>
+    <div class=" col-sm-5">
+            <h3 style="font-size: 27px ;color:black;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Empowering Students to Shape Their Future</h3><br>
+            <ul style="list-style:square;">
+                <li style="font-size: 20px;">Our platform empowers students by providing personalized career exploration, access to scholarships and funding, internship and job market support, and expert-led webinars.</li><br>
+                <li style="font-size: 20px;">We aim to help students discover their strengths, navigate financial barriers, and successfully transition from education to a thriving career.</li><br>
+                <li style="font-size: 20px;">Step-by-step pathways that map out the journey from education to career success, providing actionable insights and resources for each stage.</li>
+            </ul>
+        </div>
+  </div>
+    </div>
+    <!-- Career Path Quiz Section -->
+    <section id="quizSection">
+        <div class="container">
+            <div class="quizCard">
+                <h3 style="color: brown">Find Your Career Path</h3>
+                <p style="color: black; font-size: 22px;">Take our quiz to explore career paths that match your interests and strengths!</p>
+                <button onclick="window.location.href='quiz1.html'" style=" width: 200px;">Start Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Initiatives Section -->
+    <section id="govSection" class="container py-5">
+        <h2 class="text-center mb-4">Government Initiatives for Career Development</h2>
+        <div class="row">
+            <div class="col-md-3 govCard">
+                <h3 style="font-size: 27px; color:rgb(201, 14, 54) ;">National Career Service <br>(NCS)</h3>
+                <p style="font-size: 20px; color:black;">Explore job opportunities, skill development, and career counseling services.</p>
+                <a href="https://www.ncs.gov.in" target="_blank">Visit NCS</a>
+            </div>
+            <div class="col-md-3 govCard">
+                <h3 style="font-size: 27px; color:rgb(201, 14, 54) ;">My Gov - Career Counseling</h3>
+                <p style="font-size: 20px; color:black;">Get updates on government initiatives and career counseling resources.</p>
+                <a href="https://www.mygov.in" target="_blank">Visit MyGov</a>
+            </div>
+            <div class="col-md-3 govCard">
+                <h3 style="font-size: 27px; color:rgb(201, 14, 54) ;">NSDC</h3>
+                <p style="font-size: 20px; color:black;">Learn new skills with NSDC's vocational training programs.</p>
+                <a href="https://www.nsdcindia.org" target="_blank">Visit NSDC</a>
+            </div>
+            <div class="col-md-3 govCard">
+                <h3 style="font-size: 27px; color:rgb(201, 14, 54) ;">Scholarships.gov.in</h3>
+                <p style="font-size: 20px; color:black;">Access government scholarships for financial assistance in education.</p>
+                <a href="https://www.scholarships.gov.in" target="_blank">Visit Scholarships.gov.in</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="container">
+        <div class="row">
+        <!-- <div class=" col-sm-6 width:100%;"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium.</p></div> -->
+        <div class="col-sm-1"></div>
+        <!-- <div class=" col-sm-5 width: 100%"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. .</p></div> -->
+      </div>
+      </div>
+      <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+
+	<footer class="footer" style="height: 350px;">
+		<div class="container row">
+			<div class="footer-col">
+				<h4>Student Career</h4>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">AboutUs</a></li>
+					<li><a href="Resources.html">Resources</a></li>
+					<li><a href="guide persnal.html">Personalized Career Guidance</a></li>	
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Path</h4>
+				<ul>
+					<li><a href="class10th.html">After 10th</a></li>
+					<li><a href="class12th.html">After 12th</a></li>
+					<li><a href="UgProgram.html">After Undergraduate</a></li>
+					<li><a href="PgProgram.html">After Postgraduate</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Features </h4>
+				<ul>
+					<li><a href="quiz1.html">Quiz</a></li>
+                    <li><a href="guide persnal.html">Guide</a></li>
+                    <li><a href="Interactive.html">Interactive Tools</a></li>
+                    <li><a href="Resource.html">Explore Features</a></li>
+				</ul>
+			</div>
+			<!-- <div class="footer-col">
+				<h4>follow us</h4>
+				<div class="social-links">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+			</div> -->
+		</div>
+        </footer>
+    
+</body>
+</html>
