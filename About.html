@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Careers Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Add custom interactivity (if needed)
+// Example: Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+    <!-- Custom CSS -->
+     <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/237/191/large_2x/colorful-pencils-on-one-side-of-dark-background-free-photo.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+<!--footer-->
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* body {
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+} */
+
+.footer {
+	background-color: #151515;
+	padding: 80px 0;
+}
+
+#contain {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: #FFF;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #E91E63;
+	width: 50px;
+	height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	color: #DDD;
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #FFF;
+	padding-left: 7px;
+}
+
+.footer-col .social-links a {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+	color: #151515;
+	background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+}
+
+  
+     </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Student Careers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Resource.html">Resources</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#contact">Conta</a>
+                </li> -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Explore More
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="class10th.html">10th</a></li>
+                        <li><a class="dropdown-item" href="class12th.html">12th/ Diploma</a></li>
+                        <li><a class="dropdown-item" href="UgProgram.html">UG</a></li>
+                        <li><a class="dropdown-item" href="PgProgram.html">PG</a></li>                        </ul>
+                  </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container" id="contain">
+            <h1 class="display-4">AboutUs</h1>
+            <p class="lead"><q><b>The Future Depends on What You Do Today.</b></q></p>
+            <button class="btn btn-light btn-lg mt-3">Start your journey with us today!</button>
+        </div>
+    </header>
+          <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <!-- YOUR CODE -->
+					 <br>
+                    <div class="container-fluid">
+						<div class="row">
+						<div class=" col-sm-6 width:100%;"><img src="https://gofloaters.com/static/ec79c6fd21376b4353f877bb52ddb0c0/3e929/create-engaging-learning-environments-1.jpg" 
+							style="height:500px;"></div>
+							<div class="col-sm-1"></div>
+						<div class=" col-sm-5 width:100%"><h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><b>Why Choose Us?</b></h3>
+							<hr>
+						<ul style="list-style-type: square; font-size: 19px;">
+							<li><b>Comprehensive Resources:</b> Explore internships, scholarships, training programs, and job opportunities tailored to your profile.</li><br>
+							<li><b>Skill Development:</b> Access a wide range of courses, certifications, and career-building tools to stay ahead.</li><br>
+							<li><b>Guided Support:</b> Benefit from expert career counseling, resume-building services, and interview preparation tips.</li><br>
+							<li><b>Community Engagement:</b> Connect with like-minded peers and mentors to grow your network and learn collaboratively.</li><br>
+							<p>At Student Career Portal, we are dedicated to empowering students by bridging the gap between education and career aspirations.</p>
+						</ul></div>
+					  </div>
+					</div>
+					<br>
+					<!-- <center><hr style="font-weight: 50px; width: 500px;color: #151515;"></center> -->
+							<!-- <img src="https://st.depositphotos.com/1144687/1902/i/450/depositphotos_19024147-stock-photo-drawing-city-over-book.jpg" 
+                            style="height:500px;"> -->
+                    <!-- <img src="https://c1.wallpaperflare.com/preview/928/174/528/school-learning-graphic-design.jpg" 
+                     style="height:500px; width:50%;"> -->
+
+					 <div class="container">
+						<div class="row">
+						<div class=" col-sm-5 width:100%;"><h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><b>Our Vision</b></h3>
+							<hr>
+							<ul>
+								<ul style="list-style-type: square; font-size: 19px;">
+									<li><b>Interactive Career Exploration: </b>  Provide personalized quizzes and assessments to match students' interests and skills with suitable career paths.</li><br>
+									<li><b>Scholarship & Funding Guidance: </b> Help students access scholarships, grants, and financial aid to pursue their education and career goals</li><br>
+									<li><b>Internship Support:</b> Connect students with internship opportunities and industry networks to ease the transition from education to employment.</li><br>
+									<li><b>Career Webinars & Expert Sessions: </b> Organize webinars with industry professionals, recruiters, and alumni to offer insights on job trends, interview strategies, personal branding, soft skills, and career transitions.</li><br>
+								</ul>
+						</ul></div>
+						<div class="col-sm-1"></div>
+						<div class=" col-sm-6 width: 100%"><img src="https://img.freepik.com/free-vector/woman-working-using-laptop-flat-design_1308-96714.jpg?
+							t=st=1732373518~exp=1732377118~hmac=a35bf5d5c71823d14b5d934890c05da6373da1fe90f6939d718f0952e03e1ca2&w=996" style="height: 500px;"></div>
+					  </div>
+					  </div>
+   
+    
+                      !-- Footer -->
+                      <div class="container">
+                        <div class="row">
+                        <!-- <div class=" col-sm-6 width:100%;"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium.</p></div> -->
+                        <div class="col-sm-1"></div>
+                        <!-- <div class=" col-sm-5 width: 100%"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. .</p></div> -->
+                      </div>
+                      </div>
+                      <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+                  
+                  <footer class="footer">
+                    <div class="container row">
+                      <div class="footer-col">
+                        <h4>Student Career</h4>
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="About.html">AboutUs</a></li>
+                          <li><a href="Resource.html">Resources</a></li>
+                          <li><a href="guide persnal.html">Personalized Career Guidance</a></li>	
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Path</h4>
+                        <ul>
+                          <li><a href="class10th.html">After 10th</a></li>
+                          <li><a href="class12th.html">After 12th</a></li>
+                          <li><a href="UgProgram.html">After Undergraduate</a></li>
+                          <li><a href="PgProgram.html">After Postgraduate</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Features </h4>
+                        <ul>
+                          <li><a href="quiz1.html">Quiz</a></li>
+                                    <li><a href="guide persnal.html">Guide</a></li>
+                                    <li><a href="Interactive.html">Interactive Tools</a></li>
+                                    <li><a href="Features.html">Explore Features</a></li>
+                        </ul>
+                      </div>
+                      <!-- <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                      </div> -->
+                    </div>
+                        </footer>
+                    
+                  </body>
+                  </html>
