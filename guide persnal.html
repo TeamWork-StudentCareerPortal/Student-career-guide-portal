@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Guidance</title>
+    <title>Personalized Career Guidance</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
-        }
-        /* header {
-            background: #007bff;
+            .hero {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/001/237/191/large_2x/colorful-pencils-on-one-side-of-dark-background-free-photo.JPG');
+            background-size: cover;
+            background-position: center;
             color: white;
-        } */
-        .hero {
-    background-image: url('https://avatars.mds.yandex.net/i?id=c6600c913639a0ed1d3a44f1ebf83ca0053677b7-8710632-images-thumbs&n=13');
-    background-size: cover;
-    background-position: center;
-}
-
+        }
         form {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -140,10 +135,13 @@ ul {
 		width: 100%;
 	}
 }
+ul{
+  list-style: square;
+}
+
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -153,41 +151,71 @@ ul {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Resource.html">Resources</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#contact">Conta</a>
-                    </li> -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Explore More
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="class10th.html">10th</a></li>
-                          <li><a class="dropdown-item" href="class12th.html">12th/ Diploma</a></li>
-                          <li><a class="dropdown-item" href="UgProgram.html">UG</a></li>
-                          <li><a class="dropdown-item" href="PgProgram.html">PG</a></li>
-            
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Resource.html">Resources</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="class10th.html">10th</a></li>
+                            <li><a class="dropdown-item" href="class12th.html">12th/Diploma</a></li>
+                            <li><a class="dropdown-item" href="UgProgram.html">UG</a></li>
+                            <li><a class="dropdown-item" href="PgProgram.html">PG</a></li>
                         </ul>
-                      </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center py-5">
+    <header class="hero text-white text-center py-5">
         <div class="container">
-            <h1 class="display-4"></h1>
-            <p class="lead" style="font-size: 30px;">"Personalized Career Guidance and Future Opportunities"</p>  
-            <a href="Features.html" class="btn btn-light btn-lg mt-3">EXPLORE DIFFRENT FUTURE OPTION</a>
+            <h1 class="display-4">Personalized Career Guidance</h1>
+            <p class="lead">"Personalized Career Guidance and Future Opportunities"</p>
+            <a href="Features.html" class="btn btn-light btn-lg mt-3">EXPLORE DIFFERENT FUTURE OPTIONS</a>
         </div>
     </header>
 
+    <script>
+        // Function to generate guidance
+        function generateGuidance() {
+            const educationLevel = document.getElementById('educationLevel').value;
+            const interests = document.getElementById('interests').value.trim();
+            const careerGoals = document.getElementById('careerGoals').value.trim();
+
+            let guidanceMessage = "Based on your inputs, here are some recommendations:<br>";
+
+            if (educationLevel === "10th") {
+                guidanceMessage += "- Explore streams (Science, Commerce, Arts) that align with your interest in " + interests + ".<br>";
+                guidanceMessage += "- Consider participating in career counseling or aptitude tests to better understand your strengths.<br>";
+                guidanceMessage += "- Look into foundational courses, certifications, or extracurricular activities to build skills in areas like " + interests + ".<br>";
+                guidanceMessage += "- Stay curious and explore fields that spark your passion through books, videos, and workshops.<br>";
+            } else if (educationLevel === "12th") {
+                guidanceMessage += "- Depending on your goal of '" + careerGoals + "', research undergraduate programs or professional certifications that align with it.<br>";
+                guidanceMessage += "- Gain practical experience in your areas of interest, such as " + interests + ", through internships, part-time work, or volunteering.<br>";
+                guidanceMessage += "- Attend webinars, seminars, and career fairs to learn about industry trends and network with professionals.<br>";
+                guidanceMessage += "- Build your portfolio by working on personal or academic projects.<br>";
+            } else if (educationLevel === "Undergraduate") {
+                guidanceMessage += "- Advance your skills in " + interests + " by engaging in specialized online courses, workshops, or hackathons.<br>";
+                guidanceMessage += "- Align internships, research opportunities, or part-time jobs with your goal of '" + careerGoals + "' to gain hands-on experience.<br>";
+                guidanceMessage += "- Seek mentorship from professors or industry experts to refine your career path.<br>";
+                guidanceMessage += "- Participate in student organizations, competitions, or community projects to enhance your teamwork and leadership skills.<br>";
+                guidanceMessage += "- Start networking on platforms like LinkedIn and create a professional online presence.<br>";
+            } else if (educationLevel === "Postgraduate") {
+                guidanceMessage += "- Dive deeper into your field of interest by focusing on advanced research, case studies, or real-world applications.<br>";
+                guidanceMessage += "- Identify niche roles or industries that align with your expertise and goals.<br>";
+                guidanceMessage += "- Enhance your networking efforts by attending industry-specific conferences, workshops, and meetups.<br>";
+                guidanceMessage += "- Build a strong online portfolio or personal website showcasing your skills, projects, and achievements.<br>";
+                guidanceMessage += "- Consider teaching, mentoring, or publishing work to establish credibility in your area of expertise.<br>";
+            } else {
+                guidanceMessage = "Please select a valid education level.";
+            }
+
+            document.getElementById('guidanceResult').innerHTML = guidanceMessage;
+        }
+    </script>
 
     <!-- Guidance Form -->
     <section class="container py-5">
@@ -204,7 +232,6 @@ ul {
                             <option value="" disabled selected>Select your education level</option>
                             <option value="10th">10th Grade</option>
                             <option value="12th">12th Grade</option>
-                            <option value="Diploma">Diploma</option>
                             <option value="Undergraduate">Undergraduate</option>
                             <option value="Postgraduate">Postgraduate</option>
                         </select>
@@ -213,7 +240,7 @@ ul {
                         <label for="careerGoals" class="form-label">What are your career goals?</label>
                         <textarea class="form-control" id="careerGoals" rows="3" placeholder="e.g., Become a software developer"></textarea>
                     </div>
-                    <button type="button" class="btn w-100"  style=" background-color: black; color:white; font-size: 25px;" generateGuidance()">Get Guidance</button>
+                    <button type="button" class="btn btn-dark w-100" onclick="generateGuidance()">Get Guidance</button>
                 </form>
             </div>
         </div>
@@ -221,100 +248,55 @@ ul {
     </section>
 
     <!-- Footer -->
-    <!--<footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Student Careers Portal. All rights reserved.</p>
-    </footer>-->
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
-    <script>
-        function generateGuidance() {
-            const interests = document.getElementById("interests").value.trim();
-            const educationLevel = document.getElementById("educationLevel").value;
-            const careerGoals = document.getElementById("careerGoals").value.trim();
-
-            // Check if all fields are filled
-            if (!interests || !educationLevel || !careerGoals) {
-                document.getElementById("guidanceResult").innerHTML = `
-                    <p class="text-danger">Please fill in all fields to get guidance.</p>
-                `;
-                return;
-            }
-
-            // Basic logic for personalized guidance
-            let guidanceMessage = "Based on your inputs, here are some recommendations:<br>";
-
-            if (educationLevel === "10th") {
-                guidanceMessage += "- Consider exploring streams (Science, Commerce, Arts) based on your interest in " + interests + ".<br>";
-                guidanceMessage += "- Look into foundational courses or skill-building workshops.<br>";
-            } else if (educationLevel === "12th") {
-                guidanceMessage += "- Based on your goal of '" + careerGoals + "', explore undergraduate programs or professional certifications.<br>";
-                guidanceMessage += "- Look for internships in areas related to " + interests + " to gain practical experience.<br>";
-            } else if (educationLevel === "Undergraduate") {
-                guidanceMessage += "- Focus on advanced skills in " + interests + " through online courses or projects.<br>";
-                guidanceMessage += "- Align internships and part-time jobs with your goal of '" + careerGoals + "'.<br>";
-            } else if (educationLevel === "Postgraduate") {
-                guidanceMessage += "- Research specialized roles and industries related to your interests and goals.<br>";
-                guidanceMessage += "- Attend industry events and build a professional network.<br>";
-            }
-
-            guidanceMessage += "Keep learning and stay consistent in achieving your goals.";
-
-            // Display the guidance message
-            document.getElementById("guidanceResult").innerHTML = `<p>${guidanceMessage}</p>`;
-        }
-    </script>
- <div class="container">
-    <div class="row">
-    <!-- <div class=" col-sm-6 width:100%;"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium.</p></div> -->
-    <div class="col-sm-1"></div>
-    <!-- <div class=" col-sm-5 width: 100%"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. .</p></div> -->
-  </div>
-  </div>
-  <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
-
-<footer class="footer">
+    <div class="container">
+        <div class="row">
+        <!-- <div class=" col-sm-6 width:100%;"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium.</p></div> -->
+        <div class="col-sm-1"></div>
+        <!-- <div class=" col-sm-5 width: 100%"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. .</p></div> -->
+      </div>
+      </div>
+      <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+  
+  <footer class="footer">
     <div class="container row">
-        <div class="footer-col">
-            <h4>Student Career</h4>
-            <ul>
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="About.html">AboutUs</a></li>
-                <li><a href="Resource.html">Resources</a></li>
-                <li><a href="guide persnal.html" target="_blank">Personalized Career Guidance</a></li>	
-            </ul>
+      <div class="footer-col">
+        <h4>Student Career</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">AboutUs</a></li>
+          <li><a href="Resource.html">Resources</a></li>
+          <li><a href="guide persnal.html">Personalized Career Guidance</a></li>	
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Path</h4>
+        <ul>
+          <li><a href="class10th.html">After 10th</a></li>
+          <li><a href="class12th.html">After 12th</a></li>
+          <li><a href="UgProgram.html">After Undergraduate</a></li>
+          <li><a href="PgProgram.html">After Postgraduate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Features </h4>
+        <ul>
+          <li><a href="quiz1.html">Quiz</a></li>
+                    <li><a href="guide persnal.html">Guide</a></li>
+                    <li><a href="Interactive.html">Interactive Tools</a></li>
+                    <li><a href="Features.html">Explore Features</a></li>
+        </ul>
+      </div>
+      <!-- <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
-        <div class="footer-col">
-            <h4>Path</h4>
-            <ul>
-                <li><a href="class10th.html">After 10th</a></li>
-                <li><a href="class12th.html">After 12th</a></li>
-                <li><a href="UgProgram.html">After Undergraduate</a></li>
-                <li><a href="PgProgram.html">After Postgraduate</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Features </h4>
-            <ul>
-                <li><a href="quiz1.html">Quiz</a></li>
-                <li><a href="guide persnal.html">Guide</a></li>
-                <li><a href="Interactive.html">Interactive Tools</a></li>
-                <li><a href="Features.html">Explore Features</a></li>
-            </ul>
-        </div>
-        <!-- <div class="footer-col">
-            <h4>follow us</h4>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div> -->
+      </div> -->
     </div>
-    </footer>
-
-</body>
-</html>
+        </footer>
+    
+  </body>
+  </html>
