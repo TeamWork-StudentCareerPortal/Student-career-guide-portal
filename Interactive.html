@@ -51,6 +51,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            float: left;
+            margin-left: 55px;
         }
 
         .card:hover {
@@ -287,6 +289,10 @@ ul {
 	}
 }
     </style>
+
+    <!-- Include the HTML2PDF.js library for PDF download functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
 </head>
 
 <body>
@@ -331,11 +337,11 @@ ul {
 </header>
 
 <section>
-    <!--Webinar Sessions -->
+    <!--Courses -->
     <div class="card">
-        <h3>Expert Sessions</h3>
-        <p>Explore  upcoming webinars with experts.</p>
-        <a href="#" class="btn" onclick="showPage('Webinar Sessions')">Explore</a>
+        <h3>Course Content</h3>
+        <p>Explore  your field related courses.</p>
+        <a href="#" class="btn" onclick="showPage('Courses')">Explore</a>
     </div>
     <!-- Scholarships Card -->
     <div class="card">
@@ -356,11 +362,14 @@ ul {
         <a href="#" class="btn" onclick="showPage('internships')">Explore</a>
     </div>
     <!-- Resume Builder Card -->
-    <div class="card">
-        <h3>Resume Builder</h3>
-        <p>Create and customize your resume.</p>
-        <a href="#" class="btn" onclick="showPage('resumeBuilder')">Build Now</a>
-    </div>
+     <div class="container">
+        <!-- Resume Builder Card -->
+         
+        <div class="card">
+            <h3>Resume Builder</h3>
+            <p>Create and customize your resume.</p>
+            <a href="https://flowcv.com/resume-template/66dd410aab34a77c6e505cb6" class="btn" onclick="showPage('resumeBuilder')">Build Now</a>
+        </div>
     <!-- Interview Tips Card -->
     <div class="card">
         <h3>Interview Tips</h3>
@@ -370,8 +379,8 @@ ul {
 </section>
 
 <!-- Dynamic Content Pages -->
-<div id="Webinar Sessions" class="content-page">
-    <h2>Webinar Sessions</h2>
+<div id="Courses" class="content-page">
+    <h2>Courses Content</h2>
     <div class="section-heading">Select Your Field</div>
     <button class="link-button" onclick="showVideos('technical')">Technical</button>
     <button class="link-button" onclick="showVideos('medicine')">Medicine</button>
@@ -392,11 +401,19 @@ ul {
     <h2>Training & Certifications</h2>
     <div class="section-heading">Select Training Programs</div>
     <ul>
-        <li> Technical Skills Development  -   Duration: 6 months. <a href="#">   Enroll Now      </a> - <a href="#">Certificate Link</a></li>
-        <li>Data Science Certification    -   Duration: 4 months. <a href="#">   Enroll Now      </a> - <a href="#">Certificate Link</a></li>
-        <li>Web Development Bootcamp      -   Duration: 3 months. <a href="#">   Enroll Now      </a> - <a href="#">Certificate Link</a></li>
-        <li>Digital Marketing Mastery     -   Duration: 5 months. <a href="#">   Enroll Now      </a> - <a href="#">Certificate Link</a></li>
-        <li>Project Management Essentials -   Duration: 2 months. <a href="#">   Enroll Now      </a> - <a href="#">Certificate Link</a></li>
+        <li>Google Career Certificates - Duration: 3-6 months. <a href="https://www.coursera.org/professional-certificates/google-it-support">Enroll Now</a> - <a href="https://www.coursera.org/professional-certificates/google-it-support">Certificate Link</a></li>
+        <li>Skill India Digital Hub (SIDH) - Duration: Varies. <a href="https://www.skillindiadigital.gov.in/">Enroll Now</a> - <a href="https://www.skillindiadigital.gov.in/">Certificate Link</a></li>
+        <li>AICTE Online Courses - Duration: Flexible. <a href="https://www.aicte-india.org/">Enroll Now</a> - <a href="https://www.aicte-india.org/">Certificate Link</a></li>
+        <li>IIT Bombay - Free Online Certification Courses - Duration: Varies. <a href="https://www.iitb.ac.in">Enroll Now</a> - <a href="https://www.iitb.ac.in">Certificate Link</a></li>
+        <li>Government of India: Free Courses by NPTEL - Duration: 8-12 weeks. <a href="https://nptel.ac.in">Enroll Now</a> - <a href="https://nptel.ac.in">Certificate Link</a></li>
+        <li>Machine Learning with Python - Duration: 6 months. <a href="https://www.upgrad.com">Enroll Now</a> - <a href="https://www.upgrad.com">Certificate Link</a></li>
+        <li>Diploma in Aesthetic Medicine - Duration: Varies. <a href="https://www.medafia.com">Enroll Now</a> - <a href="https://www.medafia.com">Certificate Link</a></li>
+        <li>Health Financing Course - Duration: 4 months. <a href="https://iphindia.org">Enroll Now</a> - <a href="https://iphindia.org">Certificate Link</a></li>
+        <li>Creative Writing Workshop - Duration: 3 months. <a href="https://www.squibler.io">Enroll Now</a> - <a href="https://www.squibler.io">Certificate Link</a></li>
+
+
+
+
     </ul>
 </div>
 
@@ -411,49 +428,107 @@ ul {
     <div id="internshipList" style="margin-top: 20px;"></div>
 </div>
 
-<div id="resumeBuilder" class="content-page">
-    <h2>Resume Builder</h2>
-    <form id="resumeForm">
-        <label>Name:</label>
-        <input type="text" id="name" class="input-field" required>
-        <label>Education:</label>
-        <input type="text" id="education" class="input-field" required>
-        <label>Experience:</label>
-        <textarea id="experience" class="input-field" required></textarea>
-        <label>Objective:</label>
-        <textarea id="objective" class="input-field" required></textarea>
-        <label>Projects:</label>
-        <textarea id="projects" class="input-field"></textarea>
-        <label>Roles & Responsibilities:</label>
-        <textarea id="roles" class="input-field"></textarea>
-        <label>LinkedIn ID:</label>
-        <input type="text" id="linkedin" class="input-field">
-        <label>GitHub:</label>
-        <input type="text" id="github" class="input-field">
-        <label>Contact Info:</label>
-        <input type="text" id="contact" class="input-field">
-        <button type="submit" class="input-submit">Generate Resume</button>
-    </form>
+<div class="container">
+    <h2>Build Your Resume</h2>
+
+    <!-- Form Section -->
+    <!-- <div id="resumeBuilder" class="content-page">
+        <h2>Build Your Resume</h2>
+        <div class="form-section">
+            <h3>Enter Your Details</h3>
+            <form id="resumeForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="address" placeholder="Address" required>
+                
+                <h4>Experience</h4>
+                <textarea id="experience" placeholder="Describe your work experience" rows="4"></textarea>
+                
+                <h4>Education</h4>
+                <textarea id="education" placeholder="Describe your education background" rows="4"></textarea>
+                
+                <h4>Skills</h4>
+                <textarea id="skills" placeholder="List your skills" rows="4"></textarea>
+                
+                <button type="button" onclick="generateResume()">Generate Resume</button>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- Resume Section (hidden until form is submitted) -->
+    <div id="generatedResume" class="content-page" style="display: none;">
+        <div class="resume-template" id="resumeTemplate">
+            <h3>Resume</h3>
+            <div class="section">
+                <h4>Personal Information</h4>
+                <ul>
+                    <li><span>Name:</span> <span id="resumeName"></span></li>
+                    <li><span>Email:</span> <span id="resumeEmail"></span></li>
+                    <li><span>Phone:</span> <span id="resumePhone"></span></li>
+                    <li><span>Address:</span> <span id="resumeAddress"></span></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4>Experience</h4>
+                <p id="resumeExperience"></p>
+            </div>
+
+            <div class="section">
+                <h4>Education</h4>
+                <p id="resumeEducation"></p>
+            </div>
+
+            <div class="section">
+                <h4>Skills</h4>
+                <p id="resumeSkills"></p>
+            </div>
+
+            <button id="download-btn" onclick="downloadResume()">Download Resume</button>
+        </div>
+    </div>
 </div>
+
 
 <div id="interviewTips" class="content-page">
     <h2>Interview Tips</h2>
     <div class="section-heading">Common Questions</div>
     <ul>
-        <li>Tell me about yourself?</li>
-        <li>Why do you want to work with us?</li>
-        <li>What are your strengths and weaknesses?</li>
-        <li>Tell us about a time you handled a challenge.</li>
-        <li>What motivates you?</li>
+        <ul>
+            <ul>
+                <ul>
+                    <li>Tell me about yourself? <a href="https://www.indeed.com/career-advice/interviewing/tell-me-about-yourself">Indeed - Tell me about yourself</a></li>
+                    <li>Why do you want to work here? <a href="https://www.indeed.com/career-advice/interviewing/why-do-you-want-to-work-here">Indeed - Why do you want to work here</a></li>
+                    <li>What are your strengths? <a href="https://www.thebalancecareers.com/what-are-your-strengths-2061217">The Balance Careers - What are your strengths?</a></li>
+                    <li>What are your weaknesses? <a href="https://www.thebalancecareers.com/what-are-your-weaknesses-2061218">The Balance Careers - What are your weaknesses?</a></li>
+                    <li>Where do you see yourself in 5 years? <a href="https://www.glassdoor.com/Interview/where-do-you-see-yourself-in-5-years-Interview-Questions-EI_IE15.0,8_KO9,32.htm">Glassdoor - Where do you see yourself in 5 years?</a></li>
+                    <li>Why did you leave your last job? <a href="https://www.careerbuilder.com/advice/why-did-you-leave-your-last-job">CareerBuilder - Why did you leave your last job?</a></li>
+                    <li>Can you describe a challenging situation you’ve faced and how you dealt with it? <a href="https://www.careerbuilder.com/advice/how-to-answer-interview-questions-about-challenges">CareerBuilder - Handling challenging situations</a></li>
+                    <li>How do you handle stress and pressure? <a href="https://www.indeed.com/career-advice/interviewing/how-do-you-handle-stress-and-pressure">Indeed - How do you handle stress and pressure?</a></li>
+                    <li>What do you know about our company? <a href="https://www.careerbuilder.com/advice/what-do-you-know-about-our-company">CareerBuilder - What do you know about our company?</a></li>
+                    <li>What makes you a good fit for this role? <a href="https://www.thebalancecareers.com/why-are-you-a-good-fit-for-this-job-2061222">The Balance Careers - Why are you a good fit?</a></li>
+                    <li>What are your salary expectations? <a href="https://www.careerbuilder.com/advice/how-to-answer-questions-about-salary-expectations">CareerBuilder - Salary expectations</a></li>
+                    <li>Tell me about a time you worked in a team. <a href="https://www.glassdoor.com/Interview/tell-me-about-a-time-you-worked-in-a-team-Interview-Questions-EI_IE15.0,8_KO9,32.htm">Glassdoor - Working in a team</a></li>
+                    <li>What is your biggest accomplishment? <a href="https://www.thebalancecareers.com/what-is-your-biggest-accomplishment-2061215">The Balance Careers - Biggest accomplishment</a></li>
+                    <li>How do you prioritize your work? <a href="https://www.thebalancecareers.com/how-do-you-prioritize-your-work-2061221">The Balance Careers - How do you prioritize your work?</a></li>
+                    <li>Do you have any questions for us? <a href="https://www.careerbuilder.com/advice/what-questions-should-you-ask-in-an-interview">CareerBuilder - Questions to ask in an interview</a></li>
+                  </ul>
+                  
+              </ul>
+              
+          </ul>
+          
     </ul>
 
     <div class="section-heading">Mock Interview</div>
         <button onclick="scheduleMockInterview()">Schedule Mock Interview</button>
+        <div id="mockInterviewSection"></div>
         <div class="section-heading">Interview Tips Videos</div>
         <ul>
-            <li><a href="https://www.youtube.com/watch?v=example1" target="_blank">Interview Preparation Guide</a></li>
-            <li><a href="https://www.youtube.com/watch?v=example2" target="_blank">How to Answer Common Interview Questions</a></li>
-            <li><a href="https://www.youtube.com/watch?v=example3" target="_blank">Interview Dress Code Tips</a></li>
+            <li><a href="https://youtu.be/EW4dEzfBst0?si=1WCNE5Hk1j0zV82J" target="_blank">Interview Preparation Guide</a></li>
+            <li><a href="https://youtu.be/Ji46s5BHdr0?si=umpPcwQzX8-MCHuK" target="_blank">How to Answer Common Interview Questions</a></li>
+            <li><a href="https://youtu.be/EZbbbr8DMkg?si=-hLEm-ybixhpExbO" target="_blank">Interview Dress Code Tips</a></li>
         </ul>
     </div>
 
@@ -474,96 +549,100 @@ ul {
         const videosContent = {
             technical: {
                 videos: [
-                    { title: "TechTalks: Innovating the Future", url: "https://techscholarship1.com", date: "2025-01-06", time: "10:00 AM" },
-                    { title: "AI in Action: Real-World Applications", url: "https://techscholarship1.com", date: "2025-01-16", time: "2:00 PM" },
-                    { title: "Data Science for the Modern Enterprise", url: "https://techscholarship1.com", date: "2025-01-27", time: "11:00 AM" },
-                    { title: "Tech Disruptions: Navigating the Digital Transformation", url: "https://techscholarship1.com", date: "2025-02-18", time: "5:00 PM" },
-                    { title: "Building Resilient Systems in the Age of Cyber Threats", url: "https://techscholarship1.com", date: "2025-03-18", time: "6:00 PM" },
-                    { title: "The Power of Big Data: Analytics in the Cloud", url: "https://techscholarship1.com", date: "2025-03-29", time: "3:00 PM" },
-                    { title: "DevOps 2.0: Accelerating Continuous Delivery", url: "https://techscholarship1.com", date: "2025-03-31", time: "2:00 PM" }
+                    
+                { title: "Introduction to Computer Science - Harvard University", url: "https://www.edx.org/course/cs50s-introduction-to-computer-science" },
+                { title: "Machine Learning - Stanford University", url: "https://www.coursera.org/learn/machine-learning" },
+                { title: "Data Structures and Algorithms - UC San Diego & National Research University Higher School of Economics", url: "https://www.coursera.org/learn/data-structures-algorithms" },
+                { title: "Deep Learning Specialization - Andrew Ng", url: "https://www.coursera.org/specializations/deep-learning" },
+                { title: "Python for Everybody - University of Michigan", url: "https://www.coursera.org/specializations/python" },
+                { title: "Introduction to Cyber Security - Cisco", url: "https://www.coursera.org/learn/intro-cyber-security" },
+                { title: "Web Development Bootcamp - Colt Steele", url: "https://www.udemy.com/course/the-web-developer-bootcamp/" },
+                { title: "The Complete JavaScript Course - Jonas Schmedtmann", url: "https://www.udemy.com/course/the-complete-javascript-course/" },
+                { title: "Artificial Intelligence (AI) for Everyone - Andrew Ng", url: "https://www.coursera.org/learn/ai-for-everyone" },
+             { title: "Introduction to Cloud Computing - IBM", url: "https://www.coursera.org/learn/introduction-to-cloud" }
+
                 ]
             },
             medicine: {
                 videos: [
-                    { title: "Advancements in Telemedicine: Transforming Patient Care", url: "https://techscholarship1.com", date: "2025-01-02", time: "11:00 AM" },
-                    { title: "AI and Robotics in Modern Medicine", url: "https://techscholarship1.com", date: "2025-01-07", time: "3:00 PM" },
-                    { title: "Chronic Disease Management: Innovations in Care", url: "https://techscholarship1.com", date: "2025-01-27", time: "11:00 AM" },
-                    { title: "The Role of Artificial Intelligence in Diagnostics", url: "https://techscholarship1.com", date: "2025-02-18", time: "5:00 PM" },
-                    { title: "Healthcare 4.0: Digital Transformation in Medicine", url: "https://techscholarship1.com", date: "2025-03-18", time: "6:00 PM" },
-                    { title: "Medical Imaging: Trends and Technology in Diagnosis", url: "https://techscholarship1.com", date: "2025-03-29", time: "3:00 PM" },
-                    { title: "Global Health: Tackling Emerging Infectious Diseases", url: "https://techscholarship1.com", date: "2025-03-31", time: "2:00 PM" }
+                { title: "Introduction to Clinical Medicine - University of California, San Francisco", url: "https://www.coursera.org/learn/clinical-medicine" },
+                { title: "Anatomy Specialization - University of Michigan", url: "https://www.coursera.org/specializations/anatomy" },
+                { title: "Global Health: Current Issues and Challenges - University of Washington", url: "https://www.coursera.org/learn/global-health" },
+                { title: "Introduction to Epidemiology - University of North Carolina at Chapel Hill", url: "https://www.coursera.org/learn/epidemiology" },
+                { title: "Fundamentals of Immunology - University of Colorado Boulder", url: "https://www.coursera.org/learn/immunology" },
+                { title: "Medical Neuroscience - Duke University", url: "https://www.coursera.org/learn/medical-neuroscience" },
+                { title: "Introduction to Bioinformatics - University of California, San Diego", url: "https://www.coursera.org/learn/bioinformatics" },
+                { title: "Foundations of Public Health - University of Michigan", url: "https://www.coursera.org/learn/public-health" },
+                { title: "Cardiology: An Overview of Heart Disease - University of California, San Francisco", url: "https://www.coursera.org/learn/cardiology" },
+                { title: "The Science of Well-Being - Yale University", url: "https://www.coursera.org/learn/the-science-of-well-being" }
                 ]
             },
             arts: {
                 videos: [
-                    { title: "Masterpieces of the Future: Contemporary Art in Focus", url: "https://techscholarship1.com", date: "2025-01-03", time: "12:00 PM" },
-                    { title: "Art History Reimagined: Modern Interpretations of Classic Styles", url: "https://techscholarship1.com", date: "2025-01-08", time: "1:00 PM" },
-                    { title: "Sculpting Dreams: The Art of 3D Creation", url: "https://techscholarship1.com", date: "2024-12-07", time: "3:00 PM" },
-                    { title: "The Art of Sound: Music and Visual Arts in Harmony: Trends and Technology in Diagnosis", url: "https://techscholarship1.com", date: "2025-03-29", time: "3:00 PM" }
+                { title: "Introduction to Art History - University of California, Berkeley", url: "https://www.coursera.org/learn/introduction-art-history" },
+                { title: "The Art of Photography - Michigan State University", url: "https://www.coursera.org/learn/art-photography" },
+                { title: "Modern Art & Ideas - The Museum of Modern Art", url: "https://www.coursera.org/learn/modern-art-ideas" },
+                { title: "Drawing and Sketching for Beginners - Udemy", url: "https://www.udemy.com/course/drawing-and-sketching-for-beginners/" },
+                { title: "Art & Visual Culture - University of London", url: "https://www.coursera.org/learn/art-visual-culture" },
+                { title: "Creative Coding for Artists - Stanford University", url: "https://www.coursera.org/learn/creative-coding-artists" },
+                { title: "Introduction to Graphic Design - California Institute of the Arts", url: "https://www.coursera.org/learn/graphic-design" },
+                { title: "The Science of Art: The Role of Neuroscience - University of Toronto", url: "https://www.coursera.org/learn/science-of-art" },                 { title: "Digital Photography - Harvard University", url: "https://www.edx.org/course/digital-photography" },
+                { title: "Fashion as Design - Museum of Modern Art", url: "https://www.coursera.org/learn/fashion-as-design" }
                 ]
             },
             finance: {
                 videos: [
-                    { title: "Cryptocurrency and Blockchain: The Future of Money", url: "https://techscholarship1.com", date: "2024-12-04", time: "9:00 AM" },
-                    { title: "Navigating Financial Crises: Strategies for Surviving Economic Downturns", url: "https://techscholarship1.com", date: "2024-12-09", time: "4:00 PM" }
+                { title: "Financial Markets - Yale University", url: "https://www.coursera.org/learn/financial-markets" },
+                { title: "Corporate Finance - University of Pennsylvania", url: "https://www.coursera.org/learn/corporate-finance" },
+                { title: "Introduction to Finance and Accounting - University of Pennsylvania", url: "https://www.coursera.org/learn/wharton-finance-accounting" },
+                { title: "Investment Management - University of Geneva", url: "https://www.edx.org/course/investment-management" },
+                { title: "Financial Engineering and Risk Management - Columbia University", url: "https://www.coursera.org/learn/financial-engineering-1" },
+                { title: "Financial Planning & Analysis (FP&A) - LinkedIn Learning", url: "https://www.linkedin.com/learning/financial-planning-and-analysis-fpa" },
+                { title: "Personal & Family Financial Planning - University of Florida", url: "https://www.coursera.org/learn/personal-financial-planning" },
+                { title: "Behavioral Finance - Duke University", url: "https://www.coursera.org/learn/behavioral-finance" },
+                { title: "Quantitative Finance - MIT OpenCourseWare", url: "https://ocw.mit.edu/courses/sloan-school-of-management/15-475-quantitative-finance-fall-2010/" },
+                { title: "FinTech: Foundations & Applications of Financial Technology - University of Pennsylvania", url: "https://www.coursera.org/learn/wharton-fintech" }
                 ]
             }
         };
         const videos = videosContent[field].videos;
-        let content = '<h3>Webinar Sessions </h3><table class="table"><tr><th>Topic</th><th>Date</th><th>Time</th><th>Register</th></tr>';
+        let content = '<h3>Webinar Sessions </h3><table class="table"><tr><th>Topic</th><th>Link</th></tr>';
         videos.forEach(video => {
             content += `
                 <tr>
                     <td>${video.title}</td>
-                    <td>${video.date}</td>
-                    <td>${video.time}</td>
-                    <td><a href="${video.url}" class="link-button" target="_blank">Register</a></td>
+                    <td><a href="${video.url}" class="link-button" target="_blank">Link</a></td>
                 </tr>
             `;
         });
         content += '</table>';
-        document.getElementById('Webinar Sessions').innerHTML = content;
+        document.getElementById('Courses').innerHTML = content;
     }
 
     // Function to show Scholarships based on selected field
     function showScholarships(field) {
         const scholarshipsContent = {
             technical: [
-                { title: "Code for Tomorrow Scholarship", deadline: "2025-01-14", link: "https://techscholarship1.com" },
-                { title: "EmpowerTech Scholarship Fund", deadline: "2025-03-25", link: "https://techscholarship2.com" },
-                { title: "EmpowerTech Scholarship Fund for Girls", deadline: "2025-03-25", link: "https://techscholarship1.com" },
-                { title: "Future Innovators Tech Scholarship", deadline: "2025-06-05", link: "https://techscholarship2.com" },
-                { title: "STEM & Tech Rising Stars Scholarship", deadline: "2025-08-18", link: "https://techscholarship1.com" },
-                { title: "Tech Innovators of Tomorrow Scholarship", deadline: "2025-10-22", link: "https://techscholarship2.com" },
-
-            ],
+                { title: "AICTE Pragati Scholarship for Girls", deadline: "November 30, 2024", link: "https://scholarships.gov.in/" },
+                { title: "AICTE Saksham Scholarship for Specially-abled Students", deadline: "November 30, 2024", link: "https://scholarships.gov.in/" },
+                { title: "Central Sector Scheme of Scholarships for College & University Students", deadline: "November 30, 2024", link: "https://scholarships.gov.in/" },
+                { title: "Swami Dayanand Education Foundation Merit-cum-Means Scholarship", deadline: "31st December 2024", link: "https://www.vidhyaa.in/" }
+                ],
             medicine: [
-            { title: "Healing Hands Scholarship", deadline: "2025-01-25", link: "https://healinghandsscholarship.com" },
-            { title: "Future Physicians Scholarship Fund", deadline: "2025-03-10", link: "https://futurephysiciansfund.com" },
-            { title: "Doctors of Tomorrow Scholarship", deadline: "2025-04-15", link: "https://doctorsoftomorrow.com" },
-            { title: "Medical Innovation Scholarship", deadline: "2025-06-05", link: "https://medicalinnovationscholarship.com" },
-            { title: "The White Coat Scholarship", deadline: "2025-07-22", link: "https://thewhitecoatscholarship.com" },
-            { title: "MedFuture Scholars Grant", deadline: "2025-08-30", link: "https://medfuturescholargrant.com" },
-            { title: "Compassionate Care Scholarship", deadline: "2025-09-18", link: "https://compassionatecarescholarship.com" },
-            { title: "NextGen Medical Leaders Scholarship", deadline: "2025-10-12", link: "https://nextgenmedleaders.com" },
-            { title: "Healthcare Heroes Scholarship", deadline: "2025-11-05", link: "https://healthcareheroesscholarship.com" },
-            { title: "Pathway to Medicine Scholarship", deadline: "2025-12-01", link: "https://pathwaytomedicinescholarship.com" }
+            { title: "Adani Gyanjyoti Scholarship for Medical Students", deadline: "Varies by institution", link: "https://www.wemakescholars.com/scholarship/adani-gyanjyoti-scholarship-for-medical-students" },
+            { title: "AICTE PG Scholarships Scheme", deadline: "Varies annually", link: "https://www.aicte-india.org/" },
+            { title: "Fortis and Agilus Healthcare Scholarship", deadline: "Ongoing, no fixed deadline", link: "https://www.fortishealthcare.com" },
+            { title: "JSW UDAAN Scholarship for Odisha Students Pursuing Medical Course", deadline: "Varies each year", link: "https://www.jsw.in" },
+            { title: "Foundation For Excellence Scholarship", deadline: "Varies by course", link: "https://www.foundationforexcellence.org" }
             ],
             arts: [
-            { title: "Creative Visionaries Art Scholarship", deadline: "2025-01-12", link: "https://creativevisionariesart.com" },
-            { title: "The Art of Expression Scholarship", deadline: "2025-03-25", link: "https://artofexpressionscholarship.com" },
-            { title: "Future Artists Scholarship Fund", deadline: "2025-05-08", link: "https://futureartistsfund.com" },
-            { title: "Innovation in Art Scholarship", deadline: "2025-02-19", link: "https://innovationinartscholarship.com" }
+            { "title": "Inlaks Fine Arts Awards", "deadline": "Ongoing applications", "link": "https://www.buddy4study.com/scholarship/inlaks-fine-arts-award"},
+            { "title": "Krishnakriti Foundation Scholarship for Fine Arts", "deadline": "Ongoing applications","link": "https://www.buddy4study.com/scholarship/krishnakriti-foundation-scholarship"},
+            {"title": "ICMA Scholarship Program","deadline": "Ongoing applications","link": "https://www.buddy4study.com/scholarship/icma-scholarship-program"}
             ],
             finance: [
-            { title: "Future Finance Leaders Scholarship",deadline: "2025-01-15", link: "https://futurefinanceleaders.com" },
-            { title: "Financial Empowerment Scholarship",deadline: "2025-03-10", link: "https://financialempowerment.com" },
-            { title: "Wealth Building Scholarship", deadline: "2025-05-20", link: "https://wealthbuildingscholarship.com" },
-            { title: "The Investment Scholars Fund", deadline: "2025-02-05",link: "https://investmentscholarfund.com" },
-            { title: "NextGen Finance Innovators Scholarship", deadline: 2025-06-12, "link": "https://nextgenfinanceinnovators.com" },
-            { title: "Financial Futures Scholarship",deadline: "2025-08-01", link: "https://financialfuturesscholarship.com" },
-            { title: "Financial Planning Scholars Award", deadline: "2025-07-22", link: "https://financialplanningscholar.com" },
-            { title: "The Wealth Management Scholarship", deadline: "2025-09-18", link: "https://wealthmanagementscholarship.com" }
+            { "title": "GREAT Scholarships 2024","deadline": "Varies by university", "link": "https://www.britishcouncil.in"},
+  {"title": "Chevening Scholarships for India","deadline": "November 2024","link": "https://www.chevening.org"}
             ]
         };
         const scholarships = scholarshipsContent[field];
@@ -585,40 +664,25 @@ ul {
     function showInternships(field) {
         const internshipsContent = {
             technical: [
-                { title: "Software Developer Internship", company: "TechCorp", duration: "6 months", salary: "$2000/month", link: "https://apply-techcorp.com" },
-                { title: "Data Science Internship", company: "DataLab", duration: "3 months", salary: "$1500/month", link: "https://apply-datalab.com" },
-                { title: "Software Developer Internship", company: "TechCorp", duration: "6 months", salary: "$2000/month", link: "https://apply-techcorp.com" },
-                { title: "Data Scientist Internship", company: "DataVision", duration: "3 months", salary: "$1800/month", link: "https://apply-datavision.com" },
-                { title: "Web Developer Internship", company: "WebWorks", duration: "4 months", salary: "$1500/month", link: "https://apply-webworks.com" },
-                { title: "UI/UX Design Internship", company: "DesignLab", duration: "5 months", salary: "$1700/month", link: "https://apply-designlab.com" },
-                { title: "Cloud Engineer Internship", company: "CloudTech", duration: "6 months", salary: "$2200/month", link: "https://apply-cloudtech.com" }
-            ],
+            { title: "Animation Internship",  company: "One Media Group",  duration: "3 months",  salary: "₹15,000–20,000/month",  link: "https://internshala.com" },
+            { title: "Business Development (Sales) Internship", company: "DevTown", duration: "2 months", salary: "₹20,000–25,000/month",  link: "https://internshala.com" },
+            { title: "Social Media Marketing Internship", company: "Budding Mariners", duration: "4 months", salary: "₹2,000/month", link: "https://internshala.com" },
+            { title: "Animation Internship",  company: "Imperio Railing Systems", duration: "3 months", salary: "₹5,000–10,000/month", link: "https://internshala.com" }
+ ],
             medicine: [
-                { title: "Medical Research Internship", company: "HealthOrg", duration: "6 months", salary: "$2500/month", link: "https://apply-healthorg.com" },
-                { title: "Medical Research Internship", company: "HealthCorp", duration: "3 months", salary: "$1500/month", link: "https://apply-healthcorp.com" },
-                { title: "Clinical Internship", company: "MedClinic", duration: "6 months", salary: "$2000/month", link: "https://apply-medclinic.com" },
-                { title: "Public Health Internship", company: "GlobalHealth", duration: "4 months", salary: "$1700/month", link: "https://apply-globalhealth.com" },
-                { title: "Nursing Internship", company: "CarePlus Hospital", duration: "5 months", salary: "$1800/month", link: "https://apply-careplushospital.com" },
-                { title: "Pharmaceutical Internship", company: "PharmaTech", duration: "6 months", salary: "$2200/month", link: "https://apply-pharmatech.com" },
-                { title: "Clinical Internship", company: "MediCo", duration: "4 months", salary: "$1800/month", link: "https://apply-medicoco.com" }
+            {"title": "NCDC Internship Program","company": "National Centre for Disease Control","duration": "Up to 6 months", "salary": "No stipend (Hostel accommodation may be provided)", "link": "https://ncdc.mohfw.gov.in"},
+            {"title": "ICMR - NIRT Internship","company": "ICMR National Institute for Research in Tuberculosis","duration": "15 days to 6 months","salary": "₹2000/month (for dissertation, 1–6 months)","link": "https://nirt.res.in"},
+            {"title": "MBBS/MPH Internship Program","company": "Indian Institute of Science (IISc), Bengaluru","duration": "1 to 2 months","salary": "₹35,000 (consolidated)","link": "https://org.iisc.ac.in/mbbs-mph-internship_homepage/"}
             ],
             arts: [
-                { title: "Art Design Internship", company: "CreativeArts", duration: "3 months", salary: "$1000/month", link: "https://apply-creativearts.com" },
-                { title: "Illustration Internship", company: "CreativeArts Co.", duration: "5 months", salary: "$1400/month", link: "https://apply-creativeartsco.com" },
-                { title: "Gallery Curator Internship", company: "ModernArt Gallery", duration: "6 months", salary: "$1800/month", link: "https://apply-modernartgallery.com" },
-                { title: "Fashion Design Internship", company: "TrendyStyles", duration: "4 months", salary: "$1600/month", link: "https://apply-trendystyles.com" },
-                { title: "Photography Internship", company: "PhotoPro", duration: "5 months", salary: "$1200/month", link: "https://apply-photopro.com" }
-            ],
+            {"title": "India Art Fair Internship", "company": "India Art Fair", "duration": "Varies (1 week to 15 days)", "salary": "Stipend provided","link": "https://indiaartfair.in/careers"},
+            {"title": "Sarmaya Internship Program","company": "Sarmaya","duration": "3 months","salary": "Paid internship","link": "https://sarmaya.in/careers"},
+            { "title": "Museum of Art & Photography (MAP) Internship","company": "Museum of Art & Photography","duration": "Minimum 6 weeks","salary": "Stipend may be provided","link": "https://forms.gle/y5orN4KijSSzvErv6"}
+ ],
             finance: [
-                { title: "Financial Analyst Internship", company: "FinCorp", duration: "6 months", salary: "$2200/month", link: "https://apply-fincorp.com" },
-                { title: "Corporate Finance Internship", company: "Capital Partners", duration: "6 months", salary: "$2400/month", link: "https://apply-capitalpartners.com" },
-                { title: "Financial Planning Internship", company: "PlanRight", duration: "4 months", salary: "$1800/month", link: "https://apply-planright.com" },
-                { title: "Tax Advisory Internship", company: "TaxWise", duration: "3 months", salary: "$1600/month", link: "https://apply-taxwise.com" },
-                { title: "Private Equity Internship", company: "EquityPlus", duration: "6 months", salary: "$3000/month", link: "https://apply-equityplus.com" },
-                { title: "Investment Research Internship", company: "InvestoResearch", duration: "5 months", salary: "$2000/month", link: "https://apply-investoresearch.com" },
-                { title: "Financial Modeling Internship", company: "ModelX Finance", duration: "6 months", salary: "$2200/month", link: "https://apply-modelxfinance.com" },
-                { title: "Investment Banking Internship", company: "Investo", duration: "4 months", salary: "$3000/month", link: "https://apply-investo.com" }
-            ]
+            { "title": "Finance Internship","company": "EY India", "duration": "6 months", "salary": "Competitive (Based on skills and experience)", "link": "https://eyglobal.yello.co"},
+            {"title": "Global Finance Internship","company": "Tata Group","duration": "8 to 12 weeks","salary": "Not specified (varies by project)","link": "https://www.tataglobalinternships.tata.com"}
+ ]
         };
         const internships = internshipsContent[field];
         let content = '<h3>Available Internships</h3><table class="table"><tr><th>Title</th><th>Company</th><th>Duration</th><th>Salary</th><th>Apply</th></tr>';
@@ -636,9 +700,89 @@ ul {
         content += '</table>';
         document.getElementById('internshipList').innerHTML = content;
     }
-    function scheduleMockInterview() {
-            alert('Mock Interview Scheduled!');
+    // Function to generate the resume dynamically
+    function generateResume() {
+        // Get user input
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const experience = document.getElementById('experience').value;
+        const education = document.getElementById('education').value;
+        const skills = document.getElementById('skills').value;
+
+        // Set resume data in the template
+        document.getElementById('resumeName').textContent = name;
+        document.getElementById('resumeEmail').textContent = email;
+        document.getElementById('resumePhone').textContent = phone;
+        document.getElementById('resumeAddress').textContent = address;
+        document.getElementById('resumeExperience').textContent = experience;
+        document.getElementById('resumeEducation').textContent = education;
+        document.getElementById('resumeSkills').textContent = skills;
+
+        // Show the generated resume section
+        document.getElementById('resumeSection').style.display = 'block';
+
+        // Hide the form section
+        document.querySelector('.form-section').style.display = 'none';
+    }
+
+    // Function to download the resume as a PDF (using HTML2PDF or similar library)
+    function generateResume() {
+            // Get user input
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const experience = document.getElementById('experience').value;
+            const education = document.getElementById('education').value;
+            const skills = document.getElementById('skills').value;
+
+            // Set resume data in the template
+            document.getElementById('resumeName').textContent = name;
+            document.getElementById('resumeEmail').textContent = email;
+            document.getElementById('resumePhone').textContent = phone;
+            document.getElementById('resumeAddress').textContent = address;
+            document.getElementById('resumeExperience').textContent = experience;
+            document.getElementById('resumeEducation').textContent = education;
+            document.getElementById('resumeSkills').textContent = skills;
+
+            // Show the generated resume section
+            document.getElementById('generatedResume').style.display = 'block';
+
+            // Hide the form section
+            document.getElementById('resumeBuilder').style.display = 'none';
         }
+
+        // Function to download the resume as a PDF
+        function downloadResume() {
+            const resume = document.getElementById('resumeTemplate');
+            html2pdf().from(resume).save('resume.pdf');
+        }
+    
+
+    function scheduleMockInterview() {
+        const interviewTipsContent = {
+            scheduleMockInterview: [
+                { company: "Pramp", link: "https://www.pramp.com" },
+                { company: "Interview Buddy", link: "https://interviewbuddy.net" },
+                { company: "My Interview Practice", link: "https://www.myinterviewpractice.com" },
+                { company: "Exponent", link: "https://www.tryexponent.com" }
+            ]
+        };
+
+        let content = "<h3>Available Mock Interview Platforms:</h3><ul>";
+        interviewTipsContent.scheduleMockInterview.forEach(platform => {
+            content += `<li><a href="${platform.link}" target="_blank">${platform.company}</a></li>`;
+        });
+        content += "</ul>";
+
+        // Dynamically inserting content into a div with ID 'mockInterviewSection'
+        const section = document.getElementById('mockInterviewSection');
+        section.innerHTML = content;
+    }
+
+
 </script>
 
 <footer class="footer">
